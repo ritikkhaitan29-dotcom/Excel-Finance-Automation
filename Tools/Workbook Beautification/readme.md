@@ -101,8 +101,8 @@ Future enhancements may include configurable formatting templates, custom themes
 
 ### Before Formatting
 
-![Before Formatting](before-formatting.png)
+![Before Formatting](Before-Formatting.png)
 
 ### After Formatting
 
-![After Formatting](after-formatting.png)
+![After Formatting](After-Formatting.png)
