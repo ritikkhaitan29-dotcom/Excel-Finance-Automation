@@ -97,4 +97,12 @@ Future enhancements may include configurable formatting templates, custom themes
 
 ## Screenshots
 
-Screenshots demonstrating the workbook before and after formatting will be added here.
+## Screenshots
+
+### Before Formatting
+
+![Before Formatting](before-formatting.png)
+
+### After Formatting
+
+![After Formatting](after-formatting.png)
