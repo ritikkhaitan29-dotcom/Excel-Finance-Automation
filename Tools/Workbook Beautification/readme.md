@@ -36,6 +36,15 @@ For every populated worksheet in the active workbook, the macro:
 - Skips empty worksheets automatically.
 
 ---
+## Workflow
+
+1. Open the workbook to be formatted.
+2. Run the `BeautifyWorkbook` macro.
+3. The macro processes every populated worksheet.
+4. Formatting is applied automatically.
+5. A confirmation message is displayed when processing is complete.
+
+---
 
 ## Typical Use Cases
 
@@ -45,6 +54,14 @@ For every populated worksheet in the active workbook, the macro:
 - Internal management reports
 - Client deliverables
 - Working papers
+
+---
+
+## Requirements
+
+- Microsoft Excel
+- Macros enabled
+- Workbook must contain at least one populated worksheet
 
 ---
 
@@ -60,11 +77,13 @@ For every populated worksheet in the active workbook, the macro:
 
 ## Technical Notes
 
-- Processes every worksheet in the active workbook.
-- Formats only the populated range within each worksheet.
+- Written in Microsoft Excel VBA.
+- Operates on the active workbook.
+- Automatically ignores empty worksheets.
+- Formats only the populated range of each worksheet.
 - Preserves date values while formatting numeric cells.
 - Restores Excel application settings after execution.
-- Displays a confirmation message once formatting is complete.
+- Displays a completion message after successful processing.
 
 ---
 
