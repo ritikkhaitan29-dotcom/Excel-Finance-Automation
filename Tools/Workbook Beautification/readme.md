@@ -46,6 +46,17 @@ For every populated worksheet in the active workbook, the macro:
 
 ---
 
+## Files Included
+
+| File | Description |
+|------|-------------|
+| `BeautifyWorkbook.bas` | VBA source code that can be imported into another workbook. |
+| `WorkbookBeautification.xlsm` | Macro-enabled workbook containing the Workbook Beautification tool. |
+| `Before-Formatting.png` | Example workbook before running the macro. |
+| `After-Formatting.png` | Example workbook after running the macro. |
+
+---
+
 ## Typical Use Cases
 
 - Financial statements
@@ -94,8 +105,6 @@ For every populated worksheet in the active workbook, the macro:
 Future enhancements may include configurable formatting templates, custom themes, font selection, freeze panes and additional report styling options.
 
 ---
-
-## Screenshots
 
 ## Screenshots
 
