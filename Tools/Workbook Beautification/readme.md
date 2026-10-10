@@ -1,117 +1,73 @@
-# Workbook Beautification
+# Workbook Beautification Engine
 
 ## Overview
 
-The Workbook Beautification tool is an Excel VBA macro designed to automatically apply a consistent formatting standard across every worksheet in an Excel workbook.
+The **Workbook Beautification** tool is an Excel VBA automation utility designed to apply consistent, audit-grade formatting across all populated worksheets in an active workbook.
 
-Instead of manually formatting individual sheets, the macro processes the workbook in a single run by adjusting layout, applying borders, formatting headers and standardising numeric formats.
-
-The objective is to improve readability while reducing the repetitive effort involved in preparing workbooks for reporting or review.
+Instead of manually styling individual sheets, the macro executes across the entire workbook in a single run—adjusting layouts, applying subtle borders, standardizing header rows, and enforcing clean number and percentage formatting.
 
 ---
 
-## Problem Statement
+## The Problem
 
-Financial workbooks often contain multiple worksheets that require consistent formatting before they can be shared with management, clients or other stakeholders.
+Financial deliverables (management decks, budget reviews, audit schedules) often span multiple worksheets. Inconsistent column widths, raw unformatted numbers, and heavy default gridlines reduce readability and distract decision-makers.
 
-Formatting each worksheet manually is repetitive, time-consuming and prone to inconsistencies.
-
-This macro automates those repetitive formatting tasks to produce a cleaner and more uniform workbook.
+Manual formatting is repetitive, error-prone, and adds friction to tight reporting cycles. This tool provides a one-click automated solution.
 
 ---
 
-## What the Macro Does
+## Automation Capabilities
 
 For every populated worksheet in the active workbook, the macro:
 
-- Automatically adjusts row heights and column widths using AutoFit.
-- Applies thin light-grey borders to the used range.
-- Formats the first row as a header with:
-  - Bold text
-  - Light grey background
-  - Horizontal centre alignment
-  - Vertical centre alignment
-- Detects percentage values and formats them as **0.00%**.
-- Formats other numeric values using the **#,##0.00** number format.
-- Skips empty worksheets automatically.
-
----
-## Workflow
-
-1. Open the workbook to be formatted.
-2. Run the `BeautifyWorkbook` macro.
-3. The macro processes every populated worksheet.
-4. Formatting is applied automatically.
-5. A confirmation message is displayed when processing is complete.
+1. **Auto-Fits Layout:** Adjusts row heights and column widths to fit all content cleanly without truncating text or producing `###` overflow errors.
+2. **Applies Subtle Borders:** Replaces default harsh borders with clean, thin light-grey gridlines (`RGB(200, 200, 200)`).
+3. **Styles Header Rows:** Formats Row 1 with:
+   - Bold typography
+   - Professional light-grey background (`RGB(217, 217, 217)`)
+   - Centered horizontal and vertical alignment
+4. **Smart Numerical Formatting:**
+   - Detects percentage metrics and formats them as `0.00%`.
+   - Formats general financial numbers with thousands separators and two decimals (`#,##0.00`).
+   - Automatically preserves dates and text values without altering them.
+5. **Skips Blank Sheets:** Detects empty worksheets automatically to avoid unnecessary processing.
 
 ---
 
 ## Files Included
 
 | File | Description |
-|------|-------------|
-| `BeautifyWorkbook.bas` | VBA source code that can be imported into another workbook. |
-| `WorkbookBeautification.xlsm` | Macro-enabled workbook containing the Workbook Beautification tool. |
-| `Before-Formatting.png` | Example workbook before running the macro. |
-| `After-Formatting.png` | Example workbook after running the macro. |
+|:---|:---|
+| [`BeautifyWorkbook.bas`](BeautifyWorkbook.bas) | Standalone VBA source code module for direct import into any existing Excel workbook. |
+| [`WorkbookBeautification.xlsm`](WorkbookBeautification.xlsm) | Pre-configured macro-enabled workbook template ready for immediate use. |
+| `Before-Formatting.png` | Sample dataset illustrating unformatted raw numbers. |
+| `After-Formatting.png` | Resulting output following macro execution. |
 
 ---
 
-## Typical Use Cases
-
-- Financial statements
-- MIS reports
-- Budget and forecast workbooks
-- Internal management reports
-- Client deliverables
-- Working papers
-
----
-
-## Requirements
-
-- Microsoft Excel
-- Macros enabled
-- Workbook must contain at least one populated worksheet
-
----
-
-## Benefits
-
-- Eliminates repetitive formatting tasks.
-- Creates a consistent appearance across worksheets.
-- Improves workbook readability.
-- Reduces manual effort before sharing reports.
-- Standardises numeric presentation.
-
----
-
-## Technical Notes
-
-- Written in Microsoft Excel VBA.
-- Operates on the active workbook.
-- Automatically ignores empty worksheets.
-- Formats only the populated range of each worksheet.
-- Preserves date values while formatting numeric cells.
-- Restores Excel application settings after execution.
-- Displays a completion message after successful processing.
-
----
-
-## Current Status
-
-**Status:** Completed
-
-Future enhancements may include configurable formatting templates, custom themes, font selection, freeze panes and additional report styling options.
-
----
-
-## Screenshots
+## Visual Demonstration
 
 ### Before Formatting
-
 ![Before Formatting](Before-Formatting.png)
 
 ### After Formatting
-
 ![After Formatting](After-Formatting.png)
+
+---
+
+## Execution & Performance Optimization
+
+To deliver instant execution across large workbooks, the macro incorporates standard enterprise performance controls:
+- **`ScreenUpdating = False`:** Eliminates visual screen flickering and accelerates execution.
+- **`Calculation = xlCalculationManual`:** Prevents redundant formula recalculations during formatting passes, switching back to automatic upon completion.
+- **`DisplayAlerts = False` & `EnableEvents = False`:** Prevents alert interruptions.
+- Displays a clean confirmation dialog when processing completes.
+
+---
+
+## How to Use
+
+1. Open your target financial workbook.
+2. Press **Alt + F11** (opens VBA Editor).
+3. Go to **File > Import File...** and select `BeautifyWorkbook.bas`.
+4. Press **Alt + F8**, select `BeautifyWorkbook`, and click **Run**.

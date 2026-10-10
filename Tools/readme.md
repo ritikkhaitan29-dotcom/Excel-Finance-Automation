@@ -1,36 +1,21 @@
 # Excel Automation Tools
 
-This folder contains the Excel VBA utilities included in this repository.
+This folder contains the practical Excel VBA automation utilities included in this repository.
 
-Each tool was developed to solve a practical finance or reporting problem by reducing repetitive manual work and improving consistency.
-
-As additional automation tools are developed, they will be documented and added here.
+Each tool is designed to solve common corporate reporting and financial presentation challenges by reducing repetitive manual steps and enforcing clean, institutional formatting standards.
 
 ---
 
 ## Available Tools
 
-| Tool | Status | Description |
-|------|--------|-------------|
-| Workbook Beautification | ✅ Available | Automatically formats Excel workbooks using predefined formatting standards. |
-| File Listing Generator | ✅ Available | Creates a structured index of files and folders within a selected directory. |
-| Workbook Index Generator | ✅ Available | Generates an index sheet with hyperlinks for easier workbook navigation. |
-| Financial Ratio Calculator | 🚧 Planned | Automatically calculates key financial ratios from financial statements. |
+| Tool | Status | Language / Format | Primary Finance Use Case |
+|:---|:---|:---|:---|
+| [Workbook Beautification](Workbook%20Beautification/) | ✅ Production Ready | VBA (`.bas`) / `.xlsm` | Instant formatting standardization across multi-tab financial packs, working papers, and management MIS reports. |
 
 ---
 
 ## Repository Philosophy
 
-The objective of these tools is not to automate finance decisions.
-
-The objective is to automate repetitive manual work so finance professionals can spend more time analysing information rather than preparing it.
-
----
-
-## Future Additions
-
-Planned tools include:
-
-- Financial Statement Formatter
-- Trial Balance Analyzer
-- Data Cleaning Tools
+- **Focus on Practical Efficiency:** Eliminate manual formatting and cosmetic adjustments so finance professionals can dedicate time to financial analysis and decision support.
+- **Reliable Automation:** Standardize layouts, borders, and number formats dynamically across all active worksheets with error-safe execution.
+- **Portability:** Code is provided both as ready-to-use `.bas` modules for existing workbooks and as pre-configured `.xlsm` templates.

@@ -2,44 +2,33 @@
 
 ## Overview
 
-Excel remains one of the most widely used tools in finance.
+Excel remains the backbone of financial reporting, financial modeling, and management information systems (MIS).
 
-Whether preparing management reports, analysing financial statements, cleaning datasets or performing reconciliations, finance professionals often spend a significant amount of time on repetitive manual tasks that can be automated.
+Whether preparing monthly review decks, analyzing budget vs. actuals, or auditing working papers, finance teams frequently expend valuable hours on repetitive manual formatting, column resizing, and aesthetic cleanups.
 
-This repository contains a collection of practical Excel VBA tools developed to improve productivity and simplify common finance workflows.
-
-Rather than focusing on complex software development, the objective is to solve everyday business problems using lightweight automation that can be implemented directly within Excel.
+This project provides **production-ready VBA automation** engineered to eliminate manual formatting bottlenecks, enforce clean institutional presentation standards, and accelerate report delivery.
 
 ---
 
-## Why I Built This
+## The Problem
 
-While working with financial data, I noticed that many repetitive tasks consumed a disproportionate amount of time.
-
-Examples included formatting workbooks, preparing reports, generating file indexes and organising financial information.
-
-Although each task appeared relatively small, the cumulative time spent performing them manually was significant.
-
-I began creating VBA utilities to automate these repetitive processes.
-
-Over time, these individual macros evolved into a reusable toolkit that could be applied across different finance assignments.
+1. **Repetitive Formatting Drag:** Finance professionals often manage workbooks with 10–20+ tabs. Manually adjusting column widths, number decimals, borders, and header fills across each tab is tedious and low-value work.
+2. **Inconsistent Deliverables:** When multiple team members contribute worksheets to a consolidated reporting pack, subtle discrepancies in formatting, number notation, and alignment distract stakeholders from the underlying financial insights.
+3. **Turnaround Pressure:** During month-end close or board pack deadlines, manual formatting introduces delay and increases the risk of cosmetic errors.
 
 ---
 
-## Project Objectives
+## Design Objectives & Standards
 
-This repository aims to:
-
-- Automate repetitive Excel tasks.
-- Improve consistency across financial workbooks.
-- Reduce manual effort.
-- Improve reporting productivity.
-- Demonstrate practical VBA development for finance applications.
+- **Zero Formula Interference:** Operates purely on cosmetic and formatting properties (`Borders`, `NumberFormat`, `RowHeight`, `ColumnWidth`) without modifying cell contents, formulas, or underlying calculations.
+- **Dynamic Boundary Detection:** Uses reliable two-directional boundary searches rather than hardcoded ranges or arbitrary sheet names.
+- **Enterprise Performance:** Optimizes Excel runtime by toggling screen refreshes, alerts, and recalculation cycles during execution.
+- **Clean Audit-Grade Aesthetics:** Follows modern corporate finance visual guidelines (clean subtle grey borders, distinct header contrast, standard decimal places, and preserved dates).
 
 ---
 
-## Current Status
+## Practical Business Impact
 
-**Status:** Active
-
-Additional automation tools will continue to be added over time.
+- **Time Recovery:** Automates multi-tab workbook formatting from several minutes of manual clicking to sub-second execution.
+- **Standardization:** Enforces uniform presentation across all shared workpapers and client-facing schedules.
+- **Plug-and-Play Portability:** Requires no third-party add-ins or external software installations—runs natively inside any Microsoft Excel environment.
